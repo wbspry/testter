@@ -125,7 +125,13 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
             
             //取得したアカウントで処理を行う
             
-            self.showAccountSelectSheet(accounts)
+            //とりあえず1個目のアカウントを使う
+            
+            self.twAccount = accounts[0]
+            
+            
+            //アカウント選択画面を出す
+            //self.showAccountSelectSheet(accounts)
             
         }
     }
@@ -152,7 +158,7 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
     }
     
     private func getTimeline(){
-        let URL = NSURL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json")
+        let URL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
         
         //GET/POSTやパラメータに気をつけてリクエスト情報を生成
         let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: URL, parameters: nil)
@@ -194,8 +200,15 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
                         self.texts.append(item["text"] as! String)
                     }
                     
-                    self.tableView.reloadData()
+//                    self.tableView.reloadData()
                     
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.tableView.reloadData()
+                    }
+                    
+//                    self.tableView.performselectoronmainthread(Selector("reloadData"), withObject: nil, waitUntilDone: true)
+//                    
 
 
 //                    for twt in parsed {
