@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C42E85A51B8AA3C0009C5F14 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */; };
-		C42E85A71B8AFAD1009C5F14 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E85A61B8AFAD1009C5F14 /* CollectionViewController.swift */; };
 		C42F42A71B86F338007261E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F42A61B86F338007261E1 /* AppDelegate.swift */; };
 		C42F42A91B86F338007261E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F42A81B86F338007261E1 /* ViewController.swift */; };
 		C42F42AC1B86F338007261E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42F42AA1B86F338007261E1 /* Main.storyboard */; };
@@ -29,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
-		C42E85A61B8AFAD1009C5F14 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		C42F42A11B86F338007261E1 /* testter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42F42A51B86F338007261E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C42F42A61B86F338007261E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 				C42F42AF1B86F338007261E1 /* LaunchScreen.xib */,
 				C42F42A41B86F338007261E1 /* Supporting Files */,
 				C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */,
-				C42E85A61B8AFAD1009C5F14 /* CollectionViewController.swift */,
 			);
 			path = testter;
 			sourceTree = "<group>";
@@ -220,7 +217,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C42E85A71B8AFAD1009C5F14 /* CollectionViewController.swift in Sources */,
 				C42F42A91B86F338007261E1 /* ViewController.swift in Sources */,
 				C42E85A51B8AA3C0009C5F14 /* ModalViewController.swift in Sources */,
 				C42F42A71B86F338007261E1 /* AppDelegate.swift in Sources */,

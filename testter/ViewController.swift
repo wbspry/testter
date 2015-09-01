@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         print("HelloWorld!!")
         
@@ -40,18 +39,5 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func onTouchzDown(sender: AnyObject) {
-        lblDisp.text = "1"
-    }
-
-    @IBAction func onTouchDown(sender: AnyObject) {
-        
-//        var cvc = CollectionViewController()
-//        
-//        cvc.view.backgroundColor = UIColor.whiteColor()
-//        
-//        self.presentViewController(cvc, animated: true, completion: nil)
-        
-    }
 }
 
