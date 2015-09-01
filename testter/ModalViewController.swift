@@ -36,8 +36,20 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let obj = userDefaults.objectForKey("saveAccount") as? NSData
+        if obj != nil{
+            //保存データが取得できた場合はボタンを非活性に
+            btnTwitter.enabled = false
+            
+            twAccount = NSKeyedUnarchiver.unarchiveObjectWithData(obj!) as? ACAccount
+        }
 
     }
+    
+    @IBOutlet weak var btnTwitter: UIButton!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -128,6 +140,15 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
             //とりあえず1個目のアカウントを使う
             
             self.twAccount = accounts[0]
+            
+            // NSUserDefaultsインスタンスの生成
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            // キー: "saveText" , 値: "" を格納。（idは任意）
+            userDefaults.setObject(NSKeyedArchiver.archivedDataWithRootObject(accounts[0]), forKey: "saveAccount")
+            
+            //accounts[0].
+            
+            
             
             
             //アカウント選択画面を出す

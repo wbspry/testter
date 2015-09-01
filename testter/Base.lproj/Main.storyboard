@@ -175,6 +175,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnTwitter" destination="Shw-fW-uI7" id="Duy-Jw-Nay"/>
                         <outlet property="tableView" destination="sqN-zD-UvW" id="dc9-JY-bXd"/>
                     </connections>
                 </viewController>
