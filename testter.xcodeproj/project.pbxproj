@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		913C0C591B97A2E700E449FD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C0C581B97A2E700E449FD /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		917785301B95E55300503525 /* VariousMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177852F1B95E55300503525 /* VariousMasterViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		917785321B95E7E000503525 /* Various.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 917785311B95E7E000503525 /* Various.storyboard */; settings = {ASSET_TAGS = (); }; };
 		917785711B95F9D300503525 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917785701B95F9D300503525 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		913C0C581B97A2E700E449FD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9177852F1B95E55300503525 /* VariousMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariousMasterViewController.swift; sourceTree = "<group>"; };
 		917785311B95E7E000503525 /* Various.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Various.storyboard; sourceTree = "<group>"; };
 		917785701B95F9D300503525 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				9177852F1B95E55300503525 /* VariousMasterViewController.swift */,
 				917785701B95F9D300503525 /* MapViewController.swift */,
 				917785751B97536600503525 /* BeaconViewController.swift */,
+				913C0C581B97A2E700E449FD /* WebViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				917785711B95F9D300503525 /* MapViewController.swift in Sources */,
 				C42F42A71B86F338007261E1 /* AppDelegate.swift in Sources */,
 				C407CEE11B9696F30068EB08 /* TwitterDetailViewController.swift in Sources */,
+				913C0C591B97A2E700E449FD /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
