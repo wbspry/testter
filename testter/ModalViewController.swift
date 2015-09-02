@@ -23,6 +23,7 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
     var twAccount: ACAccount?
     //セルに表示するテキスト
     var texts = [""]
+    var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,17 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
             
             twAccount = NSKeyedUnarchiver.unarchiveObjectWithData(obj!) as? ACAccount
         }
-
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")
+        self.refreshControl.addTarget(self, action: "refreshTable", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl)
+    }
+    
+    //テーブルを更新
+    func refreshTable(){
+        //タイムラインを取得してテーブル更新
+        self.getTimeline()
     }
     
     
@@ -184,6 +195,7 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
                     
                     dispatch_async(dispatch_get_main_queue()) {
                         self.tableView.reloadData()
+                        self.refreshControl.endRefreshing()
                     }
                 }
                 catch let error as NSError {
