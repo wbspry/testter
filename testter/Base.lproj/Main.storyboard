@@ -121,11 +121,71 @@
                     <connections>
                         <outlet property="btnTwitter" destination="Shw-fW-uI7" id="Duy-Jw-Nay"/>
                         <outlet property="tableView" destination="sqN-zD-UvW" id="dc9-JY-bXd"/>
+                        <segue destination="qcw-1f-gXK" kind="show" identifier="toTwitterDetailViewController" id="Pdb-eZ-SDE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UlJ-c0-4en" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="144"/>
+        </scene>
+        <!--Twitter Detail View Controller-->
+        <scene sceneID="jmc-nn-gJG">
+            <objects>
+                <viewController id="qcw-1f-gXK" customClass="TwitterDetailViewController" customModule="testter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ssh-5A-X0u"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rq7-aw-skx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dxa-o5-mMG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMB-TD-yc7">
+                                <rect key="frame" x="53" y="550" width="48" height="30"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnCloseTapped:" destination="qcw-1f-gXK" eventType="touchDown" id="UZE-Zd-3Kn"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIY-Lg-wAt">
+                                <rect key="frame" x="20" y="28" width="560" height="200"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dYT-jO-9yH">
+                                        <rect key="frame" x="8" y="8" width="544" height="184"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dYT-jO-9yH" firstAttribute="leading" secondItem="LIY-Lg-wAt" secondAttribute="leading" constant="8" id="1iL-xv-kXL"/>
+                                    <constraint firstItem="dYT-jO-9yH" firstAttribute="top" secondItem="LIY-Lg-wAt" secondAttribute="top" constant="8" id="Noz-uG-rzq"/>
+                                    <constraint firstAttribute="bottom" secondItem="dYT-jO-9yH" secondAttribute="bottom" constant="8" id="VqK-ww-aBd"/>
+                                    <constraint firstAttribute="height" constant="200" id="a5D-OQ-wYe"/>
+                                    <constraint firstAttribute="trailing" secondItem="dYT-jO-9yH" secondAttribute="trailing" constant="8" id="hqa-nE-Erz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cMB-TD-yc7" firstAttribute="leading" secondItem="Dxa-o5-mMG" secondAttribute="leadingMargin" constant="33" id="2ri-2D-7TB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LIY-Lg-wAt" secondAttribute="trailing" id="3hB-b7-HRe"/>
+                            <constraint firstItem="LIY-Lg-wAt" firstAttribute="top" secondItem="ssh-5A-X0u" secondAttribute="bottom" constant="8" id="8iM-9b-iqs"/>
+                            <constraint firstItem="Rq7-aw-skx" firstAttribute="top" secondItem="cMB-TD-yc7" secondAttribute="bottom" constant="20" id="lQk-Wa-KrF"/>
+                            <constraint firstItem="LIY-Lg-wAt" firstAttribute="leading" secondItem="Dxa-o5-mMG" secondAttribute="leadingMargin" id="rLp-8Q-gay"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtTweetDetail" destination="dYT-jO-9yH" id="sLP-dM-wRB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXt-Wz-GoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392" y="144"/>
         </scene>
     </scenes>
 </document>

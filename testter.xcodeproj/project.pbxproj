@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C407CEE11B9696F30068EB08 /* TwitterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C42E85A51B8AA3C0009C5F14 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */; };
 		C42F42A71B86F338007261E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F42A61B86F338007261E1 /* AppDelegate.swift */; };
 		C42F42A91B86F338007261E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F42A81B86F338007261E1 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterDetailViewController.swift; sourceTree = "<group>"; };
 		C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		C42F42A11B86F338007261E1 /* testter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42F42A51B86F338007261E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				C42F42AF1B86F338007261E1 /* LaunchScreen.xib */,
 				C42F42A41B86F338007261E1 /* Supporting Files */,
 				C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */,
+				C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */,
 			);
 			path = testter;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				C42F42A91B86F338007261E1 /* ViewController.swift in Sources */,
 				C42E85A51B8AA3C0009C5F14 /* ModalViewController.swift in Sources */,
 				C42F42A71B86F338007261E1 /* AppDelegate.swift in Sources */,
+				C407CEE11B9696F30068EB08 /* TwitterDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

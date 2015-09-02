@@ -78,6 +78,26 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
         return cell
     }
     
+    //Cellが選択された場合
+    func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath){
+
+        //選択された行id
+        selectedPath = indexPath.row
+        
+        //TwitterDetailViewControllerへ遷移するためにSegueを呼び出す
+        performSegueWithIdentifier("toTwitterDetailViewController", sender: nil)
+    }
+    
+    var selectedPath:Int!
+    
+    //Segue準備
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
+        if(segue.identifier == "toTwitterDetailViewController"){
+            let tdVC: TwitterDetailViewController = (segue.destinationViewController as? TwitterDetailViewController)!
+            tdVC.paramText = texts[selectedPath]
+       }
+    }
+    
     @IBAction func onTwitterBtnDown(sender: AnyObject) {
         
         //Twitterアカウントの選択
