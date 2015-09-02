@@ -36,5 +36,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>電池食うかも</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>起動中のみ使います</string>
 </dict>
 </plist>
