@@ -22,7 +22,7 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
     var accountStore = ACAccountStore()
     var twAccount: ACAccount?
     //セルに表示するテキスト
-    var texts = [""]
+    var tableDataSource: [(name: String, text: String, date: String)] = []
     var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
@@ -67,7 +67,7 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
     
     //セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return texts.count
+        return tableDataSource.count
     }
     
     //セルの内容を変更
@@ -75,7 +75,8 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
         
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
         
-        cell.textLabel!.text = texts[indexPath.row]
+        cell.textLabel!.text = tableDataSource[indexPath.row].name + ": " + tableDataSource[indexPath.row].text + " - Posted at " + tableDataSource[indexPath.row].date
+
         
         return cell
     }
@@ -96,7 +97,7 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
         if(segue.identifier == "toTwitterDetailViewController"){
             let tdVC: TwitterDetailViewController = (segue.destinationViewController as? TwitterDetailViewController)!
-            tdVC.paramText = texts[selectedPath]
+            tdVC.paramText = tableDataSource[selectedPath].name + ": " + tableDataSource[selectedPath].text + " - Posted at " + tableDataSource[selectedPath].date
        }
     }
     
@@ -209,10 +210,11 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
                     // Try parsing some valid JSON
                     let parsed : NSArray = try NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.AllowFragments) as! NSArray
                     
-                    self.texts.removeAll()
+                    self.tableDataSource.removeAll()
                     
                     for item in parsed{
-                        self.texts.append(item["text"] as! String)
+                        let userInfo = item["user"] as! NSDictionary
+                        self.tableDataSource.append(name:userInfo["name"] as! String, text:item["text"] as! String, date:item["created_at"] as! String)
                     }
                     
                     dispatch_async(dispatch_get_main_queue()) {
