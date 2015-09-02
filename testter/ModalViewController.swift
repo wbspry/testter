@@ -39,6 +39,8 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
             btnTwitter.enabled = false
             
             twAccount = NSKeyedUnarchiver.unarchiveObjectWithData(obj!) as? ACAccount
+            
+            getTimeline()
         }
         
         self.refreshControl = UIRefreshControl()
