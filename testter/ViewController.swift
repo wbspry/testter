@@ -39,5 +39,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func variousButtonTapped(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Various", bundle: nil)
+        let splitVC = storyboard.instantiateViewControllerWithIdentifier("VariousViewController") as! UISplitViewController
+        splitVC.preferredDisplayMode = .AllVisible
+        splitVC.delegate = self
+        self.presentViewController(splitVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func variousViewReturnActionForSegue(segue: UIStoryboardSegue) {
+        segue.sourceViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 
+extension ViewController: UISplitViewControllerDelegate {
+    func splitViewController(splitViewController: UISplitViewController,
+        showDetailViewController vc: UIViewController, sender: AnyObject?) -> Bool {
+            // UISplitViewController#showDetailViewController()を呼ばれた時に呼ばれる
+            return false
+    }
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
+        return true
+    }
+}

@@ -27,11 +27,20 @@
                                     <segue destination="hyC-rx-ppF" kind="presentation" id="Hi5-uc-zrA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ7-0L-atk">
+                                <rect key="frame" x="328" y="523" width="105" height="30"/>
+                                <state key="normal" title="なんかいろいろ"/>
+                                <connections>
+                                    <action selector="variousButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6HI-mi-iYV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9sE-hl-ho8" secondAttribute="bottom" constant="47" id="Lf3-0u-Ihe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9sE-hl-ho8" secondAttribute="trailing" constant="43" id="UZy-lk-a74"/>
+                            <constraint firstItem="9sE-hl-ho8" firstAttribute="leading" secondItem="HZ7-0L-atk" secondAttribute="trailing" constant="44" id="egj-jz-ayz"/>
+                            <constraint firstItem="HZ7-0L-atk" firstAttribute="centerY" secondItem="9sE-hl-ho8" secondAttribute="centerY" id="vEd-nE-CvD"/>
                         </constraints>
                     </view>
                 </viewController>

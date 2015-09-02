@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C407CEE11B9696F30068EB08 /* TwitterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+        C407CEE11B9696F30068EB08 /* TwitterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		917785301B95E55300503525 /* VariousMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177852F1B95E55300503525 /* VariousMasterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		917785321B95E7E000503525 /* Various.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 917785311B95E7E000503525 /* Various.storyboard */; settings = {ASSET_TAGS = (); }; };
+		917785711B95F9D300503525 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917785701B95F9D300503525 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		917785731B95FB4600503525 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 917785721B95FB4600503525 /* MapKit.framework */; };
 		C42E85A51B8AA3C0009C5F14 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */; };
 		C42F42A71B86F338007261E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F42A61B86F338007261E1 /* AppDelegate.swift */; };
 		C42F42A91B86F338007261E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F42A81B86F338007261E1 /* ViewController.swift */; };
@@ -28,7 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterDetailViewController.swift; sourceTree = "<group>"; };
+        C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterDetailViewController.swift; sourceTree = "<group>"; };
+		9177852F1B95E55300503525 /* VariousMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariousMasterViewController.swift; sourceTree = "<group>"; };
+		917785311B95E7E000503525 /* Various.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Various.storyboard; sourceTree = "<group>"; };
+		917785701B95F9D300503525 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		917785721B95FB4600503525 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		C42F42A11B86F338007261E1 /* testter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42F42A51B86F338007261E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917785731B95FB4600503525 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +69,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		917785331B95E82700503525 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9177852F1B95E55300503525 /* VariousMasterViewController.swift */,
+				917785701B95F9D300503525 /* MapViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		917785741B95FE7000503525 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				917785721B95FB4600503525 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C42F42981B86F338007261E1 = {
 			isa = PBXGroup;
 			children = (
 				C42F42A31B86F338007261E1 /* testter */,
 				C42F42B91B86F338007261E1 /* testterTests */,
 				C42F42A21B86F338007261E1 /* Products */,
+				917785741B95FE7000503525 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,7 +115,9 @@
 				C42F42AF1B86F338007261E1 /* LaunchScreen.xib */,
 				C42F42A41B86F338007261E1 /* Supporting Files */,
 				C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */,
-				C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */,
+                C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */,
+				917785311B95E7E000503525 /* Various.storyboard */,
+				917785331B95E82700503525 /* ViewControllers */,
 			);
 			path = testter;
 			sourceTree = "<group>";
@@ -168,7 +197,7 @@
 				TargetAttributes = {
 					C42F42A01B86F338007261E1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 4ZU8CH45QB;
+						DevelopmentTeam = M8WHB2LEDJ;
 					};
 					C42F42B51B86F338007261E1 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -202,6 +231,7 @@
 			files = (
 				C42F42AC1B86F338007261E1 /* Main.storyboard in Resources */,
 				C42F42B11B86F338007261E1 /* LaunchScreen.xib in Resources */,
+				917785321B95E7E000503525 /* Various.storyboard in Resources */,
 				C42F42AE1B86F338007261E1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,8 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917785301B95E55300503525 /* VariousMasterViewController.swift in Sources */,
 				C42F42A91B86F338007261E1 /* ViewController.swift in Sources */,
 				C42E85A51B8AA3C0009C5F14 /* ModalViewController.swift in Sources */,
+				917785711B95F9D300503525 /* MapViewController.swift in Sources */,
 				C42F42A71B86F338007261E1 /* AppDelegate.swift in Sources */,
 				C407CEE11B9696F30068EB08 /* TwitterDetailViewController.swift in Sources */,
 			);
