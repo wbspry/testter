@@ -22,7 +22,7 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
     var accountStore = ACAccountStore()
     var twAccount: ACAccount?
     //セルに表示するテキスト
-    var tableDataSource: [(name: String, text: String, date: String)] = []
+    var tableDataSource: [(name: String, text: String, date: String, image: String)] = []
     var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
@@ -73,9 +73,23 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
     //セルの内容を変更
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
+//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
         
-        cell.textLabel!.text = tableDataSource[indexPath.row].name + ": " + tableDataSource[indexPath.row].text + " - Posted at " + tableDataSource[indexPath.row].date
+        let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell")!
+        
+        let label1 = cell.viewWithTag(1) as! UILabel
+        let textView1 = cell.viewWithTag(2) as! UITextView
+        let imageView1 = cell.viewWithTag(3) as! UIImageView
+        
+        let imagePath = tableDataSource[indexPath.row].image
+        
+        let imageData: NSData = NSData(contentsOfURL: NSURL(string: imagePath)!)!
+        
+        imageView1.image = UIImage(data: imageData)
+        label1.text = tableDataSource[indexPath.row].name
+        textView1.text = tableDataSource[indexPath.row].text + " - Posted at " + tableDataSource[indexPath.row].date
+        
+//        cell.textLabel!.text = tableDataSource[indexPath.row].name + ": " + tableDataSource[indexPath.row].text + " - Posted at " + tableDataSource[indexPath.row].date
 
         
         return cell
@@ -214,7 +228,7 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
                     
                     for item in parsed{
                         let userInfo = item["user"] as! NSDictionary
-                        self.tableDataSource.append(name:userInfo["name"] as! String, text:item["text"] as! String, date:item["created_at"] as! String)
+                        self.tableDataSource.append(name:userInfo["name"] as! String, text:item["text"] as! String, date:item["created_at"] as! String, image: userInfo["profile_image_url"] as! String)
                     }
                     
                     dispatch_async(dispatch_get_main_queue()) {
