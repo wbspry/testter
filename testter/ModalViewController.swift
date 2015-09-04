@@ -81,10 +81,22 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
         let label1 = cell.viewWithTag(1) as! UILabel
         let textView1 = cell.viewWithTag(2) as! UILabel
 
+        let q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        let q_main = dispatch_get_main_queue();
+        
         let imageView1 = cell.viewWithTag(3) as! UIImageView
         let imagePath = tableDataSource[indexPath.row].image
-        let imageData: NSData = NSData(contentsOfURL: NSURL(string: imagePath)!)!
-        imageView1.image = UIImage(data: imageData)
+        
+        dispatch_async(q_global){
+
+            let imageData: NSData = NSData(contentsOfURL: NSURL(string: imagePath)!)!
+            let image = UIImage(data: imageData)
+            
+            dispatch_async(q_main){
+                imageView1.image = image
+                cell.layoutSubviews()
+            }
+        }
         
         label1.text = tableDataSource[indexPath.row].name
         textView1.text = tableDataSource[indexPath.row].text + " - Posted at " + tableDataSource[indexPath.row].date

@@ -99,14 +99,14 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hVr-J3-TWg">
-                                                            <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                            <rect key="frame" x="8" y="8" width="48" height="50"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="0qC-34-Ien"/>
+                                                                <constraint firstAttribute="width" constant="48" id="0qC-34-Ien"/>
                                                                 <constraint firstAttribute="height" constant="50" id="dv7-TT-PPh"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-dK-bay">
-                                                            <rect key="frame" x="66" y="8" width="31" height="20"/>
+                                                            <rect key="frame" x="64" y="8" width="31" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="Qze-pg-M1h"/>
                                                             </constraints>
@@ -115,7 +115,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkD-va-UiQ">
-                                                            <rect key="frame" x="66" y="36" width="458" height="71"/>
+                                                            <rect key="frame" x="64" y="36" width="460" height="71"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
