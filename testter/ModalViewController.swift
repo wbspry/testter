@@ -24,13 +24,12 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
     //セルに表示するテキスト
     var tableDataSource: [(name: String, text: String, date: String, image: String)] = []
     var refreshControl: UIRefreshControl!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let obj = userDefaults.objectForKey("saveAccount") as? NSData
@@ -47,6 +46,10 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
         self.refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新")
         self.refreshControl.addTarget(self, action: "refreshTable", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl)
+        
+        self.tableView.estimatedRowHeight = 200.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
     }
     
     //テーブルを更新
@@ -73,24 +76,18 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
     //セルの内容を変更
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell")!
         
         let label1 = cell.viewWithTag(1) as! UILabel
-        let textView1 = cell.viewWithTag(2) as! UITextView
+        let textView1 = cell.viewWithTag(2) as! UILabel
+
         let imageView1 = cell.viewWithTag(3) as! UIImageView
-        
         let imagePath = tableDataSource[indexPath.row].image
-        
         let imageData: NSData = NSData(contentsOfURL: NSURL(string: imagePath)!)!
-        
         imageView1.image = UIImage(data: imageData)
+        
         label1.text = tableDataSource[indexPath.row].name
         textView1.text = tableDataSource[indexPath.row].text + " - Posted at " + tableDataSource[indexPath.row].date
-        
-//        cell.textLabel!.text = tableDataSource[indexPath.row].name + ": " + tableDataSource[indexPath.row].text + " - Posted at " + tableDataSource[indexPath.row].date
-
         
         return cell
     }
@@ -243,5 +240,6 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
             }
         }
     }
+
 }
 
