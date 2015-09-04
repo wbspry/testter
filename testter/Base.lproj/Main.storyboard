@@ -34,11 +34,22 @@
                                     <action selector="variousButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6HI-mi-iYV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo9-mL-BM9">
+                                <rect key="frame" x="270" y="285" width="60" height="30"/>
+                                <state key="normal" title="おためし">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2gY-dO-Oct" kind="presentation" id="eUb-XT-TB3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9sE-hl-ho8" secondAttribute="bottom" constant="47" id="Lf3-0u-Ihe"/>
+                            <constraint firstItem="xo9-mL-BM9" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="T3j-vf-dcB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9sE-hl-ho8" secondAttribute="trailing" constant="43" id="UZy-lk-a74"/>
+                            <constraint firstItem="xo9-mL-BM9" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="YCK-dR-eNs"/>
                             <constraint firstItem="9sE-hl-ho8" firstAttribute="leading" secondItem="HZ7-0L-atk" secondAttribute="trailing" constant="44" id="egj-jz-ayz"/>
                             <constraint firstItem="HZ7-0L-atk" firstAttribute="centerY" secondItem="9sE-hl-ho8" secondAttribute="centerY" id="vEd-nE-CvD"/>
                         </constraints>
@@ -47,6 +58,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="90" y="144"/>
+        </scene>
+        <!--Device Info View Controller-->
+        <scene sceneID="SI8-XG-HNU">
+            <objects>
+                <viewController id="2gY-dO-Oct" customClass="DeviceInfoViewController" customModule="testter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ynQ-8g-t3r"/>
+                        <viewControllerLayoutGuide type="bottom" id="ybt-Pu-SC1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KdK-pi-iWr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gps-yI-78c">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gps-yI-78c" firstAttribute="leading" secondItem="KdK-pi-iWr" secondAttribute="leadingMargin" id="34V-IY-bzR"/>
+                            <constraint firstItem="ybt-Pu-SC1" firstAttribute="top" secondItem="Gps-yI-78c" secondAttribute="bottom" id="4We-YE-lCC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gps-yI-78c" secondAttribute="trailing" id="oiS-5v-UEu"/>
+                            <constraint firstItem="Gps-yI-78c" firstAttribute="top" secondItem="ynQ-8g-t3r" secondAttribute="bottom" id="yg6-P1-Ce0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Gps-yI-78c" id="u2v-a9-hLD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7Y-Wo-AUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="912"/>
         </scene>
         <!--Modal View Controller-->
         <scene sceneID="lCh-9l-nnZ">

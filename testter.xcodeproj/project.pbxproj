@@ -21,6 +21,7 @@
 		C42F42AE1B86F338007261E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42F42AD1B86F338007261E1 /* Images.xcassets */; };
 		C42F42B11B86F338007261E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42F42AF1B86F338007261E1 /* LaunchScreen.xib */; };
 		C42F42BD1B86F338007261E1 /* testterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F42BC1B86F338007261E1 /* testterTests.swift */; };
+		C45EE9861B999C5200E8BFB9 /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EE9851B999C5200E8BFB9 /* DeviceInfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		C42F42B61B86F338007261E1 /* testterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42F42BB1B86F338007261E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C42F42BC1B86F338007261E1 /* testterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testterTests.swift; sourceTree = "<group>"; };
+		C45EE9851B999C5200E8BFB9 /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */,
 				917785311B95E7E000503525 /* Various.storyboard */,
 				917785331B95E82700503525 /* ViewControllers */,
+				C45EE9851B999C5200E8BFB9 /* DeviceInfoViewController.swift */,
 			);
 			path = testter;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				917785301B95E55300503525 /* VariousMasterViewController.swift in Sources */,
 				C42F42A91B86F338007261E1 /* ViewController.swift in Sources */,
+				C45EE9861B999C5200E8BFB9 /* DeviceInfoViewController.swift in Sources */,
 				C42E85A51B8AA3C0009C5F14 /* ModalViewController.swift in Sources */,
 				917785761B97536600503525 /* BeaconViewController.swift in Sources */,
 				917785711B95F9D300503525 /* MapViewController.swift in Sources */,
