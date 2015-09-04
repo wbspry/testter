@@ -131,13 +131,6 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
         
     }
     
-    @IBAction func onUpdateBtnDown(sender: AnyObject) {
-        
-        //Twitterタイムラインの取得
-        self.getTimeline()
-        
-    }
-    
     private func selectTwitterAccount(){
         //認証するアカウントのタイプを選択(他にはFacebookやWeiboなどがある)
         let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
