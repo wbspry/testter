@@ -16,6 +16,8 @@ class TwitterDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         txtTweetDetail.text = paramText
+        
+        self.navigationItem.title = "detail"
     }
     
     override func didReceiveMemoryWarning() {

@@ -78,6 +78,10 @@
 		917785331B95E82700503525 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */,
+				C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */,
+				C42F42A81B86F338007261E1 /* ViewController.swift */,
+				C45EE9851B999C5200E8BFB9 /* DeviceInfoViewController.swift */,
 				9177852F1B95E55300503525 /* VariousMasterViewController.swift */,
 				917785701B95F9D300503525 /* MapViewController.swift */,
 				917785751B97536600503525 /* BeaconViewController.swift */,
@@ -117,16 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				C42F42A61B86F338007261E1 /* AppDelegate.swift */,
-				C42F42A81B86F338007261E1 /* ViewController.swift */,
 				C42F42AA1B86F338007261E1 /* Main.storyboard */,
 				C42F42AD1B86F338007261E1 /* Images.xcassets */,
 				C42F42AF1B86F338007261E1 /* LaunchScreen.xib */,
 				C42F42A41B86F338007261E1 /* Supporting Files */,
-				C42E85A41B8AA3C0009C5F14 /* ModalViewController.swift */,
-				C407CEE01B9696F30068EB08 /* TwitterDetailViewController.swift */,
 				917785311B95E7E000503525 /* Various.storyboard */,
 				917785331B95E82700503525 /* ViewControllers */,
-				C45EE9851B999C5200E8BFB9 /* DeviceInfoViewController.swift */,
 			);
 			path = testter;
 			sourceTree = "<group>";

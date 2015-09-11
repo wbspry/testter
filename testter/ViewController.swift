@@ -50,6 +50,18 @@ class ViewController: UIViewController {
     @IBAction func variousViewReturnActionForSegue(segue: UIStoryboardSegue) {
         segue.sourceViewController.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        print("view消えるよ")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        print("view消えたよ")
+    }
+    
+    @IBAction func switchValueChanged(sender: UISwitch) {
+        print("かわったよ")
+    }
 }
 
 extension ViewController: UISplitViewControllerDelegate {

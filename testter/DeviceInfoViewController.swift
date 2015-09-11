@@ -28,6 +28,14 @@ class DeviceInfoViewController: UIViewController, UITableViewDataSource,UITableV
         tableDataSource.append(device.systemName)
         tableDataSource.append(device.systemVersion)
         
+        let screen:UIScreen = UIScreen.mainScreen()
+        
+        tableDataSource.append("scale:\(screen.scale)")
+        tableDataSource.append("height:\(screen.bounds.height)")
+        
+        self.tabBarItem.title = "tabbardesu"
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +55,15 @@ class DeviceInfoViewController: UIViewController, UITableViewDataSource,UITableV
         cell.textLabel!.text = tableDataSource[indexPath.row]
         
         return cell
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        print("HelloWorlded!!")
+        
+        print(isMovingToParentViewController())
+        print(isBeingPresented())
+        
     }
     
     
