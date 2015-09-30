@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func switchValueChanged(sender: UISwitch) {
-        print("かわったよ")
+        print(sender.on)
     }
 }
 

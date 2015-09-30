@@ -248,6 +248,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="97l-gC-XXW" firstAttribute="leading" secondItem="3df-xC-xYu" secondAttribute="leadingMargin" constant="8" id="3X2-oC-f9f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ssg-V2-eJd" secondAttribute="trailing" constant="5" id="CLk-1F-s6i"/>
@@ -261,8 +262,18 @@
                             <constraint firstItem="ZEl-tv-0ob" firstAttribute="top" secondItem="Gy5-pd-KAd" secondAttribute="bottom" constant="20" id="hPJ-EV-r3C"/>
                             <constraint firstItem="Shw-fW-uI7" firstAttribute="trailing" secondItem="3df-xC-xYu" secondAttribute="trailingMargin" id="y5k-cu-Pam"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9Pe-TP-svb" appends="YES" id="3Le-mA-tyN"/>
+                            <outletCollection property="gestureRecognizers" destination="XcA-h1-bki" appends="YES" id="qZj-lG-bes"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="uB0-7Z-qdM"/>
+                    <navigationItem key="navigationItem" id="uB0-7Z-qdM">
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="v2J-yD-7Wy">
+                            <connections>
+                                <action selector="onNavBackTapped:" destination="hyC-rx-ppF" id="TDB-NB-s5f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnTwitter" destination="Shw-fW-uI7" id="Duy-Jw-Nay"/>
                         <outlet property="tableView" destination="sqN-zD-UvW" id="dc9-JY-bXd"/>
@@ -270,6 +281,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UlJ-c0-4en" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="9Pe-TP-svb">
+                    <connections>
+                        <action selector="longtap:" destination="hyC-rx-ppF" id="uy7-Bh-Xeq"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="XcA-h1-bki">
+                    <rectEdge key="edges" left="YES" top="YES" right="YES" bottom="YES"/>
+                    <connections>
+                        <action selector="edgeSwiped:" destination="hyC-rx-ppF" id="lLv-qT-QWf"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1578" y="199"/>
         </scene>

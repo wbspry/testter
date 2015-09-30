@@ -52,6 +52,44 @@ class ModalViewController: UIViewController, UITableViewDataSource,UITableViewDe
         
     }
     
+    //ナビゲーションバーのもどるボタン
+    @IBAction func onNavBackTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func longtap(sender: UILongPressGestureRecognizer) {
+        
+        print("longtap")
+    }
+    
+    @IBAction func edgeSwiped(sender: UIScreenEdgePanGestureRecognizer) {
+        
+        print("edgeswipe")
+ 
+        switch(sender.state){
+            case UIGestureRecognizerState.Began:
+                print("Began")
+                break
+            case UIGestureRecognizerState.Changed:
+                print("Changed")
+                break
+            case UIGestureRecognizerState.Ended:
+                print("Ended")
+                self.dismissViewControllerAnimated(true, completion: nil)
+                break
+            case UIGestureRecognizerState.Cancelled:
+                print("Cancelled")
+                break
+            case UIGestureRecognizerState.Failed:
+                print("Failed")
+                break
+            default:
+                print("default")
+                break
+        }
+        
+    }
+    
     //テーブルを更新
     func refreshTable(){
         //タイムラインを取得してテーブル更新
